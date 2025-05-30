@@ -46,7 +46,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
 <body>
 <div class="login-container">
         <div class="login-box">
-            <img src="logogrande.png" alt="Checknow Logo" class="logo" />
+            <img src="imagens/logogrande.png" alt="Checknow Logo" class="logo" />
             <h1>Login</h1>
 
             <form action="" method="POST">
