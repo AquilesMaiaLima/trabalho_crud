@@ -1,10 +1,15 @@
 <?php
-    $hostname = "localhost";
-    $bancodedados = "trabalho_crud";
-    $usuario = "root";
-    $senha = "";
+$hostname = "localhost";
+$bancodedados = "trabalho_crud";
+$usuario = "root";
+$senha = "";
 
-    $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
-    if ($mysqli->connect_errno) {
-        echo "falha ao conectar:(" . $mysqli->connect_errno . ")". $mysqli->connect_errno;
-    }
+try {
+    $pdo = new PDO("mysql:host=$hostname;dbname=$bancodedados;charset=utf8", $usuario, $senha);
+    // Define o modo de erro do PDO para exceções
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Erro na conexão: " . $e->getMessage();
+    exit();
+}
+?>

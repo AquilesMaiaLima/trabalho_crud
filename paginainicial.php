@@ -1,5 +1,9 @@
 <?php
-include('protect.php');
+session_start();
+if (!isset($_SESSION['email'])) {
+    header('Location: index.php');
+    exit;
+}
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,7 @@ include('protect.php');
 <body>
     <header>
     <div class="logo">
-      <img src="logogrande.png" alt="Logo Checknow" />
+      <img src="imagens/logo.png" alt="Logo Checknow" />
       <h1>Checknow</h1>
     </div>
     <nav>
