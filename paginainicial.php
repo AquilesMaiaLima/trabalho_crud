@@ -1,8 +1,9 @@
 <?php
+if(!isset($_SESSION)){
 session_start();
-if (!isset($_SESSION['email'])) {
-    header('Location: index.php');
-    exit;
+}
+if (!isset($_SESSION['id'])) {
+  die("Você não pode acessar essa ppagina pois não esta logado.");
 }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@ if (!isset($_SESSION['email'])) {
         <li><a href="#">Relatórios</a></li>
         <li><a href="#">Protocolos</a></li>
         <li><a href="#">Disponibilidade</a></li>
-        <li><a href="index.php">Sair</a></li>
+        <li><a href="logout.php">Sair</a></li>
       </ul>
     </nav>
   </header>

@@ -1,5 +1,5 @@
 <?php
-include('conexao.php'); // Este arquivo deve criar a variável $pdo (conexão PDO)
+include('conexao.php');
 
 if (isset($_POST['email']) || isset($_POST['senha'])) {
 
@@ -14,7 +14,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         try {
             $stmt = $pdo->prepare("SELECT * FROM avaliador WHERE email = :email AND senha = :senha");
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':senha', $senha); // ⚠️ Veja nota abaixo sobre segurança!
+            $stmt->bindParam(':senha', $senha);
             $stmt->execute();
 
             if ($stmt->rowCount() == 1) {
@@ -30,7 +30,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 header("Location: paginainicial.php");
                 exit();
             } else {
-                echo "Falha ao logar! E-mail ou senha incorretos";
+                echo "Falha ao logar! E-mail ou senha incorretos.";
             }
         } catch (PDOException $e) {
             echo "Erro no banco de dados: " . $e->getMessage();
