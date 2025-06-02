@@ -18,14 +18,14 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             $stmt->execute();
 
             if ($stmt->rowCount() == 1) {
-                $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
+                $avaliador = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if (!isset($_SESSION)) {
                     session_start();
                 }
 
-                $_SESSION['id'] = $cliente['id'];
-                $_SESSION['nome'] = $cliente['nome'];
+                $_SESSION['id'] = $avaliador['id'];
+                $_SESSION['nome'] = $avaliador['nome'];
 
                 header("Location: paginainicial.php");
                 exit();
