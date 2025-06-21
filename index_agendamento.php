@@ -42,16 +42,20 @@ $agendamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($agendamentos as $ag): ?>
-          <tr>
-            <td><?= $ag['id'] ?></td>
-            <td><?= htmlspecialchars($ag['nome_cliente']) ?></td>
-            <td><?= substr($ag['horario'], 0, 5) ?></td>
-            <td><?= date('d/m/Y', strtotime($ag['data'])) ?></td>
-            <td><?= date('d/m/Y', strtotime($ag['data_criacao'])) ?></td>
-          </tr>
-        <?php endforeach; ?>
-      </tbody>
+  <?php foreach ($agendamentos as $ag): ?>
+    <tr>
+      <td><?= $ag['id'] ?></td>
+      <td><?= htmlspecialchars($ag['nome_cliente']) ?></td>
+      <td><?= substr($ag['horario'], 0, 5) ?></td>
+      <td><?= date('d/m/Y', strtotime($ag['data'])) ?></td>
+      <td><?= date('d/m/Y', strtotime($ag['data_criacao'])) ?></td>
+      <td>
+        <a href="editar_agendamento.php?id=<?= $ag['id'] ?>" class="editar" id="editar">Editar</a>
+        <a href="excluir_agendamento.php?id=<?= $ag['id'] ?>" class="excluir" id="excluir" onclick="return confirm('Tem certeza que deseja excluir este agendamento?')">Excluir</a>
+      </td>
+    </tr>
+  <?php endforeach; ?>
+</tbody>
     </table>
   </div>
 </body>
