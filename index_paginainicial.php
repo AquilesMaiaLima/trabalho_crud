@@ -17,7 +17,7 @@ include ('verifica_login.php');
     <nav>
       <ul>
         <li><a href="#">Relatórios</a></li>
-        <li><a href="#">Protocolos</a></li>
+        <li><a href="index_agendamento.php">agendamento</a></li>
         <li><a href="#">Disponibilidade</a></li>
         <li><a href="logout.php">Sair</a></li>
       </ul>
@@ -35,9 +35,9 @@ include ('verifica_login.php');
       </div>
 
       <div class="card">
-        <h3>Protocolos de Avaliação</h3>
-        <p>Cadastre e gerencie protocolos e metodologias utilizados nas avaliações.</p>
-        <a href="#">Acessar</a>
+        <h3>Agendar Avaliação</h3>
+        <p>Cadastrar avaliações feitas pessoalmente.</p>
+        <a href="index_agendamento.php">Acessar</a>
       </div>
 
       <div class="card">

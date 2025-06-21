@@ -27,7 +27,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
                 $_SESSION['id'] = $avaliador['id'];
                 $_SESSION['nome'] = $avaliador['nome'];
 
-                header("Location: paginainicial.php");
+                header("Location: index_paginainicial.php");
                 exit();
             } else {
                 echo "Falha ao logar! E-mail ou senha incorretos.";
