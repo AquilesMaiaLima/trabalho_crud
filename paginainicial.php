@@ -1,10 +1,5 @@
 <?php
-if(!isset($_SESSION)){
-session_start();
-}
-if (!isset($_SESSION['id'])) {
-  die("Você não pode acessar essa ppagina pois não esta logado.");
-}
+include ('verifica_login.php');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
