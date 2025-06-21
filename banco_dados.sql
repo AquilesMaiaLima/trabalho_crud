@@ -14,10 +14,8 @@ CREATE TABLE avaliador (
 
 CREATE TABLE agendamento (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    id_cliente INT NOT NULL,
-    id_avaliador INT NOT NULL,
-    data_hora DATETIME NOT NULL,
-    observacoes TEXT,
-    FOREIGN KEY (id_cliente) REFERENCES cliente(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_avaliador) REFERENCES avaliador(id) ON DELETE CASCADE
+    nome_cliente VARCHAR(100) NOT NULL,
+    horario TIME NOT NULL,
+    data DATE NOT NULL,
+    data_criacao DATE DEFAULT CURRENT_DATE
 );
