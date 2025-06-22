@@ -19,3 +19,12 @@ CREATE TABLE agendamento (
     data DATE NOT NULL,
     data_criacao DATE DEFAULT CURRENT_DATE
 );
+
+CREATE TABLE relatorio_avaliacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_agendamento INT NOT NULL,
+    peso DECIMAL(5,2) NOT NULL,
+    altura INT NOT NULL,
+    gordura DECIMAL(5,2) NOT NULL,
+    data_criacao DATE DEFAULT CURRENT_DATE
+);
