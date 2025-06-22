@@ -19,7 +19,7 @@ include('verifica_login.php');
         <li><a href="#">Relatórios</a></li>
         <li><a href="index_agendamento.php">agendamento</a></li>
         <li><a href="#">Disponibilidade</a></li>
-        <li><a href="logout.php">Sair</a></li>
+        <li><a href="index_paginainicial.php">Inicio</a></li>
       </ul>
     </nav>
   </header>
