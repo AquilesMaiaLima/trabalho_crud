@@ -16,7 +16,7 @@ include ('verifica_login.php');
     </div>
     <nav>
       <ul>
-        <li><a href="#">Relatórios</a></li>
+        <li><a href="index_relatorio.php">Relatórios</a></li>
         <li><a href="index_agendamento.php">agendamento</a></li>
         <li><a href="#">Disponibilidade</a></li>
         <li><a href="logout.php">Sair</a></li>
@@ -31,7 +31,7 @@ include ('verifica_login.php');
       <div class="card">
         <h3>Relatórios de Avaliação</h3>
         <p>Gerencie relatórios de avaliações físicas feitas com seus clientes.</p>
-        <a href="#">Acessar</a>
+        <a href="index_relatorio.php">Acessar</a>
       </div>
 
       <div class="card">

@@ -16,7 +16,7 @@ include('verifica_login.php');
     </div>
     <nav>
       <ul>
-        <li><a href="#">Relatórios</a></li>
+        <li><a href="index_relatorio.php">Relatórios</a></li>
         <li><a href="index_agendamento.php">agendamento</a></li>
         <li><a href="#">Disponibilidade</a></li>
         <li><a href="index_paginainicial.php">Inicio</a></li>
