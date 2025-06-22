@@ -6,8 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = $_POST['data'];
     $horario = $_POST['horario'];
 
-    $id_cliente = rand(10, 999);
-
     $sql = "INSERT INTO agendamento (nome_cliente, horario, data)
             VALUES (:nome_cliente, :horario, :data)";
     
